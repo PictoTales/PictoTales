@@ -1,0 +1,197 @@
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PictoTales – Mach dein Kind zum Helden!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #a7d8ff, #f6d6ff, #fff0b3);
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header img {
+      max-width: 300px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    h1 {
+      font-family: 'Baloo 2', cursive;
+      font-size: 2.8rem;
+      color: #007BFF;
+      margin-top: 1rem;
+    }
+
+    .subtitle {
+      font-size: 1.3rem;
+      color: #444;
+      margin-bottom: 2rem;
+    }
+
+    .xmas {
+      display: inline-block;
+      background: linear-gradient(90deg, #ff80ab, #ffb74d, #81c784);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px rgba(255,255,255,0.6); }
+      to { text-shadow: 0 0 20px rgba(255,255,255,1); }
+    }
+
+    .cta-btn {
+      background-color: #ffb74d;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .cta-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .section {
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .step {
+      background: white;
+      border-radius: 25px;
+      padding: 2rem;
+      width: 250px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .step:hover {
+      transform: scale(1.05);
+    }
+
+    .step h3 {
+      font-family: 'Baloo 2', cursive;
+      color: #007BFF;
+      margin-top: 1rem;
+    }
+
+    .trust-bar {
+      background: linear-gradient(90deg, #fce4ec, #e3f2fd, #fff9c4);
+      padding: 3rem 1rem;
+      border-top: 4px solid #007BFF;
+      text-align: center;
+    }
+
+    .stars {
+      color: #FFD700;
+      font-size: 1.8rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(90deg, #007BFF, #81c784);
+      color: white;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    footer p { margin: 0.5rem 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="pictotales-logo.png" alt="PictoTales Logo">
+    <h1>Mach dein Kind zum Helden seiner eigenen Geschichte!</h1>
+    <p class="xmas">🎄 Weihnachten steht vor der Tür – das perfekte Geschenk wartet! 🎁</p>
+    <p class="subtitle">Gestalte ein einzigartiges Kinderbuch mit deinem Kind als Hauptfigur – liebevoll illustriert, bunt und magisch!</p>
+    <button class="cta-btn" onclick="window.location.href='info.html'">Jetzt dein persönliches Buch gestalten</button>
+  </header>
+
+  <section class="section">
+    <h2 style="font-family:'Baloo 2'; color:#007BFF;">So funktioniert’s</h2>
+    <div class="steps">
+      <div class="step">
+        <div style="font-size:3rem;">📸</div>
+        <h3>1. Foto hochladen</h3>
+        <p>Sende uns ein Bild deines Kindes, das wir liebevoll in eine Illustration verwandeln.</p>
+      </div>
+      <div class="step">
+        <div style="font-size:3rem;">📖</div>
+        <h3>2. Geschichte wählen</h3>
+        <p>Wähle aus spannenden Themen: Fußballheld, Zauberer, Superheld und mehr!</p>
+      </div>
+      <div class="step">
+        <div style="font-size:3rem;">✨</div>
+        <h3>3. Dein Buch erhalten</h3>
+        <p>Erhalte ein wunderschön gestaltetes Buch, in dem dein Kind die Hauptrolle spielt!</p>
+      </div>
+    </div>
+  </section>
+
+<section id="prices" style="padding: 60px 20px; background: #f9fcff; text-align: center;">
+  <h2 style="color: #4a90e2; font-size: 2rem; margin-bottom: 20px;">
+    Unsere Bücher & Preisübersicht 📚
+  </h2>
+  <p style="font-size: 1.1rem; color: #555; max-width: 700px; margin: 0 auto 40px;">
+    Wähle dein Lieblingsformat für das personalisierte Kinderbuch von <strong>PictoTales</strong> –
+    liebevoll gestaltet, hochwertig gedruckt und voller Magie ✨
+  </p>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 900px; margin: 0 auto;">
+    <div style="background: white; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); padding: 30px; width: 260px;">
+      <h3 style="color: #4a90e2;">Softcover Buch</h3>
+      <p style="font-size: 1rem; color: #555;">Format: <strong>155×235 mm</strong><br>Umfang: <strong>30 Seiten</strong></p>
+      <p style="font-size: 1.3rem; color: #ff70a6; font-weight: bold;">16,99 €</p>
+    </div>
+    <div style="background: white; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); padding: 30px; width: 260px;">
+      <h3 style="color: #4a90e2;">Hardcover Buch</h3>
+      <p style="font-size: 1rem; color: #555;">Format: <strong>155×235 mm</strong><br>Umfang: <strong>60 Seiten</strong></p>
+      <p style="font-size: 1.3rem; color: #ff70a6; font-weight: bold;">20,99 €</p>
+    </div>
+  </div>
+  <p style="margin-top: 40px; color: #777; font-size: 1rem;">
+    💡 Tipp: Perfekt als Geschenk zu Geburtstagen, Taufen oder Weihnachten 🎁
+  </p>
+</section>
+  <section class="trust-bar">
+    <h2 style="font-family:'Baloo 2'; color:#007BFF;">Warum Eltern PictoTales lieben</h2>
+    <div class="stars">★★★★★</div>
+    <p>„Mein Sohn war überglücklich, sich selbst als Held zu sehen!“ – <strong>Anna L.</strong></p>
+    <p>„So liebevoll gestaltet – das perfekte Weihnachtsgeschenk!“ – <strong>Markus T.</strong></p>
+  </section>
+
+  <footer>
+    <p>📧 Kontakt: <a href="mailto:infopictotales@gmx.de" style="color:white; text-decoration:underline;">infopictotales@gmx.de</a></p>
+    <p>© 2025 PictoTales – Alle Rechte vorbehalten</p>
+  </footer>
+</body>
+</html>
