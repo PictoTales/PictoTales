@@ -1,0 +1,142 @@
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PictoTales – Buchanfrage</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(180deg, #a3d8ff, #ffe6f2);
+      color: #333;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background: #4a90e2;
+      color: white;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    header img {
+      height: 90px;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #4a90e2;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #ff70a6;
+      margin-top: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      color: #555;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    input[type="file"] {
+      border: none;
+    }
+
+    button {
+      background: linear-gradient(90deg, #4a90e2, #ff70a6);
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 1.1rem;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(90deg, #ff70a6, #4a90e2);
+    }
+
+    footer {
+      margin-top: 40px;
+      background: #4a90e2;
+      color: white;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="pictotales-logo.png" alt="PictoTales Logo" />
+    <h1>Dein persönliches Kinderbuch wartet!</h1>
+  </header>
+
+  <main>
+    <h2>✨ Buchanfrage ✨</h2>
+    <p>Weihnachten steht vor der Tür 🎄 – überrasche dein Kind mit einem personalisierten Buch voller Magie und Abenteuer!</p>
+
+    <!-- 🔹 AKTIVES FORMULAR FÜR NETLIFY 🔹 -->
+ <form name="buchanfrage" method="POST" data-netlify="true" action="thankyou.html" netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value="buchanfrage">
+  <div style="display:none:">
+    <label>Bot-Field: <input name="bot-field"></label>
+  </div>     <label for="name">Name des Kindes:</label>
+      <input type="text" id="name" name="Name des Kindes" required>
+
+      <label for="farbe">Lieblingsfarbe des Kindes:</label>
+      <input type="text" id="farbe" name="Lieblingsfarbe" placeholder="z. B. Blau, Rosa, Grün" required>
+
+      <label for="email">Deine E-Mail-Adresse:</label>
+      <input type="email" id="email" name="Email" required>
+
+      <label for="geschichte">Gewünschte Geschichte:</label>
+      <select id="geschichte" name="Geschichte">
+        <option value="Fussballabenteuer">Fußballabenteuer</option>
+        <option value="Superheldenreise">Superheldenreise</option>
+        <option value="Zauberwald">Zauberwald</option>
+        <option value="Dino-Welt">Dino-Welt</option>
+        <option value="Eigene">Eigene Geschichte (unten eintragen)</option>
+      </select>
+
+      <label for="eigene">Eigene Geschichte (optional):</label>
+      <textarea id="eigene" name="Eigene Geschichte" rows="4" placeholder="Hier kannst du deine eigene Idee beschreiben..."></textarea>
+
+      <label for="foto">Foto deines Kindes (optional):</label>
+      <input type="file" id="foto" name="Foto" accept="image/*">
+
+      <button type="submit">📩 Buch-Anfrage absenden</button>
+    </form>
+  </main>
+
+  <footer>
+    © 2025 PictoTales | Kontakt: <a href="mailto:infopictotales@gmx.de" style="color:white;">infopictotales@gmx.de</a>
+  </footer>
+</body>
+</html>
