@@ -3,6 +3,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PictoTales – Buchanfrage</title>
+  <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js" charset="utf-8">
   <style>
     body {
       font-family: "Poppins", sans-serif;
@@ -127,7 +128,7 @@
       <textarea id="eigene" name="Eigene Geschichte" rows="4" placeholder="Hier kannst du deine eigene Idee beschreiben..."></textarea>
 
       <label for="foto">Foto deines Kindes (optional):</label>
-      <input type="file" id="foto" name="Foto" accept="image/*">
+      <input type="hidden" id="foto" name="Foto" role="uploadcare-uploader" data-piblic-key="9e4bc7fb31a8a0fdc853" data-images-only="true"
 
       <button type="submit">📩 Buch-Anfrage absenden</button>
     </form>
@@ -138,4 +139,5 @@
   </footer>
 </body>
 </html>
+
 
