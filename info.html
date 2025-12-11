@@ -171,8 +171,28 @@
     <a href="einverstaendnis.html">Einverständniserklärung</a>
     </p>
   </footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("form");
+  const foto = document.querySelector('input[name="foto"]');
+
+  if (!form || !foto) return;
+
+  form.addEventListener("submit", () => {
+    if (!foto.value) return;
+
+    // Beispiel URL: https://ucarecdn.com/<UUID>/
+    const m = foto.value.match(/ucarecdn\.com\/([^\/]+)\//);
+    if (m && m[1]) {
+      foto.value = m[1]; // nur UUID senden
+    }
+  });
+});
+</script>
+
 </body>
 </html>
+
 
 
 
