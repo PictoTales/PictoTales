@@ -175,16 +175,22 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
   const foto = document.querySelector('input[name="foto"]');
-
   if (!form || !foto) return;
 
-  form.addEventListener("submit", () => {
-    if (!foto.value) return;
+  let alreadySubmitting = false;
 
-    // Beispiel URL: https://ucarecdn.com/<UUID>/
-    const m = foto.value.match(/ucarecdn\.com\/([^\/]+)\//);
-    if (m && m[1]) {
-      foto.value = m[1]; // nur UUID senden
+  form.addEventListener("submit", (e) => {
+    if (alreadySubmitting) return;
+
+    // Wenn ein Foto ausgewählt ist und es eine Uploadcare-URL ist -> nur UUID senden
+    if (foto.value) {
+      const m = foto.value.match(/ucarecdn\.(com|net)\/([^\/]+)\//);
+      if (m && m[2]) {
+        e.preventDefault();              // Stoppt den ersten Submit sicher
+        foto.value = m[2];               // nur UUID
+        alreadySubmitting = true;
+        form.submit();                   // Submit nochmal mit bereinigtem Wert
+      }
     }
   });
 });
@@ -192,6 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
+
 
 
 
